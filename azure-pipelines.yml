@@ -78,7 +78,7 @@ stages:
     and
     (
       succeeded(),
-      ne(variables['Build.SourceBranchName'], variables['releaseBranchName'])
+      ne(variables['Build.SourceBranchName'], variables['release/'])
     )
   jobs:
   - deployment: Deploy
