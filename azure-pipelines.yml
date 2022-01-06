@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'MyAgentPool'
+  name: 'MyAgentPool'
 
 variables:
   buildConfiguration: 'Release'
