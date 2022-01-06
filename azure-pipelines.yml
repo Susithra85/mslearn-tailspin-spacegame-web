@@ -2,7 +2,7 @@ trigger:
 - '*'
 
 pool:
-  vmImage: 'Azure Pipelines'
+  name: 'MyAgentPool'
   demands:
   - npm
 
