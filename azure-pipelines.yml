@@ -29,11 +29,12 @@ stages:
       inputs:
         versionSpec: '14.x'
     
+    - script: npm install --only=dev
+
     - task: Npm@1
       displayName: 'npm install'
       inputs:
         command: 'install'
-        workingDir: 'FrontEnd'
         verbose: true
         
     - script: './node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
