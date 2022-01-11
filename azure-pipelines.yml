@@ -25,13 +25,17 @@ stages:
       inputs:
         version: '$(dotnetSdkVersion)'
 
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '14.x'
+    
     - task: Npm@1
       displayName: 'npm install'
       inputs:
-        command: custom
-        verbose: false
-        customCommand: install
-
+        command: 'install'
+        workingDir: 'FrontEnd'
+        verbose: true
+        
     - script: './node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
       displayName: 'Compile Sass assets'
 
