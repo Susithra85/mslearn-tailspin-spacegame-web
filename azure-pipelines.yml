@@ -26,7 +26,7 @@ stages:
         version: '$(dotnetSdkVersion)'
 
     - task: Npm@1
-      displayName: 'Run npm install'
+      displayName: 'Run npm install npm@latest'
       inputs:
         verbose: false
 
